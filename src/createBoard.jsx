@@ -11,10 +11,9 @@ const createBoard = (grid, minesCount) => {
             adjMines: 0,
         } ))
     );
-    console.log(board);
     
     let minePlaced = 0;
-    while (minePlaced <= minesCount) {
+    while (minePlaced < minesCount) {
         let row = Math.floor(Math.random() * grid);
         let col = Math.floor(Math.random() * grid);
         if (!board[row][col].mine) {
