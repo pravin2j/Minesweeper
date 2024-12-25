@@ -95,15 +95,15 @@ const Board = ({ grid, minesCount }) => {
     return (
         <div>
             <div className='mb-4 p-1 rounded-lg flex flex-col items-center'>
-                { gameOver && <div className="bg-gray-200 px-2 rounded-lg shadow-md text-3xl font-extrabold text-center">Game Over!</div> }
+                { gameOver && <div className="bg-bgButton text-fontColor px-2 rounded-lg shadow-md text-3xl font-extrabold text-center">Game Over!</div> }
                 {
-                    gameOver && (win ? <div className="bg-gray-200 w-fit text-2xl px-2 rounded-b-lg shadow-md text-center">You Win!!!</div>
-                        : <div className="bg-gray-200 w-fit text-2xl px-2 rounded-b-lg shadow-md text-center">You Lose...</div>)
+                    gameOver && (win ? <div className="bg-bgButton text-fontColor w-fit text-2xl px-2 rounded-b-lg shadow-md text-center">You Win!!!</div>
+                        : <div className="bg-bgButton text-fontColor w-fit text-2xl px-2 rounded-b-lg shadow-md text-center">You Lose...</div>)
                 }
 
             </div>
 
-            <div className={'grid gap-1 w-max'}
+            <div className={'grid gap-1 sm:w-full'}
                 style={{ gridTemplateColumns: `repeat(${grid}, 1fr)` }}
             >
                 {board.map((row, rIndex) => {
@@ -118,7 +118,7 @@ const Board = ({ grid, minesCount }) => {
                 })}
             </div>
             <div className='text-center m-4'>
-                <button className='bg-blue-200 px-4 py-2 rounded-lg'
+                <button className='bg-bgButton text-fontColor font-bold px-4 py-2 rounded-lg'
                 onClick={resetBoard}>
                     Restart
                 </button>

@@ -1,3 +1,20 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+    html {
+        --bg-main: #fff;
+        --bg-secondary:rgb(229 231 235 / var(--tw-bg-opacity, 1));
+        --bg-button: rgb(34 211 238 / var(--tw-bg-opacity, 1));
+    }
+    html[data-theme="dark"] {
+        --font-color: #fff;
+        --bg-main: #0f172a;
+        --bg-secondary: rgb(55 65 81 / var(--tw-bg-opacity, 1));
+        --bg-button: rgb(21 94 117 / var(--tw-bg-opacity, 1));
+    }
+    body {
+        @apply bg-bgMain;
+    }
+}
